@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// tri par selection (ou tri par extraction)
+// attention algorithme no efficace temps d'exécution quadration O(n**2)
+//let's get the code 
+ function triselection(T){
+
+ for(let i=0;i<=T.length-2;i++){
+   let min=i;
+    for( let j=i+1;j<=T.length-1;j++){
+        // ici on va chercher l'element inferieur à T[min] s'il éxiste
+        // ça avec un parcous du tableau jusqu'au dernière indice 
+        //attention l'indice de min est toujous lengeur tableau-2;
+        // car c'est automatique si j vaut longueur donc ce unutile de utliser longueur pour
+        // le reste 
+ if(T[j]<T[min]){
+         min=j;
+
+     }
+}
+  if(min!=i){
+    let k=T[i];
+        T[i]=T[min];
+        T[min]=k;
+  }
+     
+    
+ }
+
+console.log(T);
+}
+//test triselection
+
+triselection([2,3,1,0,4,5,8,7]);
+
+     // pour l'"change on peut mettre une fonction "
+    
+    /**
+    function echange(a,b){
+
+        let k=a;
+        a=b;
+        b=k;
+    }
+    avec a=T[j],b=T[min] passage par réference car c'est un tableau 
+     
+     on peut meme utiliser 
+     [a,b]=[b,a]
+*/
+
+
+
+    </script>
+</body>
+</html>

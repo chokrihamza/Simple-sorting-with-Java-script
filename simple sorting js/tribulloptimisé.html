@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      // tri à bulle optimiser 
+function tribulle(T){
+ for(let i=T.length-1;i>=0;i--){
+   //the optimiser it's a boolean variable
+   let sortyarray=true;
+   for(let j=0;j<=i-1;j++){
+      if(T[j]>T[j+1]){
+        let k;
+        k=T[j];
+        T[j]=T[j+1];
+        T[j+1]=k;
+      }
+     }
+   if(sortyarray){
+     break;
+   }
+ }
+ console.log(T);
+}
+// let's take a test 
+tribulle([3,2,5,4,7,9,8,10,10,12,11]);
+
+
+
+
+  </script>
+</body>
+</html>
